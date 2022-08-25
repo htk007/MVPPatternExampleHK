@@ -21,4 +21,9 @@ class MainActivityPresenter(dateCalculationManager: DateCalculationManager): Mai
         val currentDate = this.mDateCalculationManager.calculateDate()
         this.mView.showDate(currentDate)
     }
+
+    override fun onShowSessionButtonOnClick() {
+       val currentSession = this.mDateCalculationManager.calculateSession()
+        this.mView.showSession(currentSession)
+    }
 }
